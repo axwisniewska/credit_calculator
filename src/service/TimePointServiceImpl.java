@@ -15,9 +15,9 @@ public class TimePointServiceImpl implements TimePointService {
     @Override
     public TimePoint calculate(BigDecimal rateNumber, InputData inputData) {
         LocalDate date = calculateDate(rateNumber, inputData);
-
         BigDecimal year = calculateYear(rateNumber);
         BigDecimal month = calculateMonth(rateNumber);
+
         return new TimePoint(date, year, month);
 
     }
